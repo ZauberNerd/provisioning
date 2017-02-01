@@ -1,0 +1,3 @@
+---
+- name: Install iterm2
+  homebrew: name="Caskroom/cask/iterm2" state=present

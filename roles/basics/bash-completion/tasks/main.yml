@@ -1,0 +1,3 @@
+---
+- name: Install bash-completion
+  homebrew: name=bash-completion state=present

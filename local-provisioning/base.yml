@@ -1,0 +1,36 @@
+---
+- hosts: local
+  connection: local
+
+  roles:
+    - cask
+    - bash
+    - bash-completion
+    - alfred
+    - caffeine
+    - tunnelblick
+    - google-chrome
+    - karabiner-elements
+    - docker
+    - editorconfig
+    - git
+    - jdk
+    - nvm
+    - python3
+    - ruby
+    - go
+    - hub
+    - jq
+    - tig
+    - aws-cli
+    - atom
+    - vscode
+    - virtualbox
+    - watchman
+    - flow
+    # - android-sdk
+    # - react-native-cli
+    - genymotion
+    # ***
+    # Have a look at our roles repository for a hug collection of generic roles
+    # ***

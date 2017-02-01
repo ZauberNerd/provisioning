@@ -1,0 +1,12 @@
+---
+- name: Download rvm installer
+  get_url:
+    url=https://get.rvm.io
+    dest=/tmp/install-rvm.sh
+    mode=0755
+
+- name: Install RVM
+  command: /tmp/install-rvm.sh
+
+# - name: Install Ruby (RVM)
+  # shell: "rvm install "

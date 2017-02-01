@@ -1,0 +1,12 @@
+---
+- name: Install React-Native CLI
+  npm: name=react-native-cli global=yes state=present
+
+- name: Install prerequisites for expect module
+  command: pip install pexpect
+
+- name: Install required android sdk components
+  expect:
+    command: android update sdk --no-ui --force --all --filter platform-tools,android-23,build-tools-23.0.1,extra-android-support,extra-android-m2repository,sys-img-x86_64-android-23,extra-google-m2repository
+    responses:
+      "Do you accept the license": "y\r"

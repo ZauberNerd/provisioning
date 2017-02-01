@@ -1,0 +1,4 @@
+---
+- name: Install Bash (OS X)
+  homebrew: name=bash state=present
+  when: ansible_os_family == 'Darwin'

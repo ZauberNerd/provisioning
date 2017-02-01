@@ -1,0 +1,21 @@
+---
+- name: Install Atom (OS X)
+  homebrew_cask: name=atom state=present
+
+- name: Check installed atom plugins
+  command: sh -c "apm list --installed --bare | sed 's/@.*//'"
+  register: installed_atom_plugins
+  changed_when: false
+
+- name: Install Atom plugins
+  command: apm install {{ item }}
+  when: "'{{ item }}' not in '{{ installed_atom_plugins.stdout }}'"
+  with_items:
+    - atom-wallaby
+    - clipboard-plus
+    - jellybeans
+    - language-babel
+    - linter
+    - nuclide
+    - pigments
+    - tool-bar
